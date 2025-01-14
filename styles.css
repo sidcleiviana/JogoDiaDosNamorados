@@ -1,0 +1,201 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fdf7f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-container {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  margin: 20px auto;
+  border: 3px solid #ff69b4;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff5f8;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#gameCanvas {
+  display: block;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #ffe4e1 0%, #ffc0cb 100%);
+}
+
+.question-box {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid #ff69b4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+}
+
+.question-box p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.question-box button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffb6c1;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.question-box button:hover {
+  background-color: #ff69b4;
+  color: white;
+  transform: scale(1.05);
+}
+
+.question-box button:active {
+  background-color: #ff4181;
+  transform: scale(0.95);
+}
+
+h1 {
+  font-size: 24px;
+  color: #ff69b4;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+button.btn-small {
+  padding: 5px 10px;
+  font-size: 12px;
+  background-color: #ffb6c1;
+}
+
+button.btn-small:hover {
+  background-color: #ff99a3;
+}
+
+button.btn-small:active {
+  background-color: #ff6b82;
+}
+
+/* Config Screen Styling */
+#configScreen {
+  background: linear-gradient(135deg, #ff69b4, #ffb6c1);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  color: white;
+  margin: auto;
+}
+
+#configScreen h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#configScreen .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#configScreen label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+#configScreen input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+
+#configScreen button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: white;
+  color: #ff69b4;
+  border: 2px solid #ff69b4;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#configScreen button:hover {
+  background-color: #ff69b4;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.question-box button:hover {
+  animation: bounce 0.4s ease-in-out;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .game-container {
+    width: 100%;
+    height: 300px;
+  }
+
+  #gameCanvas {
+    width: 100%;
+    height: auto;
+  }
+
+  .question-box {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .question-box p {
+    font-size: 16px;
+  }
+
+  .question-box button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  #configScreen {
+    padding: 20px;
+  }
+
+  #configScreen h1 {
+    font-size: 22px;
+  }
+
+  #configScreen button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}

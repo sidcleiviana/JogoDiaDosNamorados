@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurar Quiz do Amor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="configScreen">
+    <!-- Etapa 1: Nome, Email e Título -->
+    <div id="step1">
+      <h1>Configurar Jogo</h1>
+      <form id="step1Form">
+        <div class="form-group">
+          <label>Nome:</label>
+          <input type="text" id="nome" placeholder="Digite seu nome" required>
+        </div>
+        
+        <div class="form-group">
+          <label>Email:</label>
+          <input type="email" id="email" placeholder="Digite seu email" required>
+        </div>
+        
+        <div class="form-group">
+          <label>Título do Jogo:</label>
+          <input type="text" id="titulo" placeholder="Digite o título do jogo" required>
+        </div>
+        
+        <button type="button" id="nextStepBtn" class="btn">Próximo</button>
+      </form>
+    </div>
+
+    <!-- Etapa 2: Perguntas -->
+    <div id="step2" style="display: none;">
+      <h1>Adicione as Perguntas</h1>
+      <div id="perguntasContainer" class="grid-container"></div>
+      <button type="button" id="addQuestionBtn" class="btn">Adicionar Pergunta</button>
+      <button type="submit" id="saveGameBtn" class="btn">Salvar e Gerar Link</button>
+
+      <div id="gameLink" style="display: none;">
+        <p>Seu jogo foi criado! Envie este link para sua namorada:</p>
+        <a id="link" target="_blank"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./supabase.min.js"></script>
+  <script src="config.js"></script>
+</body>
+</html>
